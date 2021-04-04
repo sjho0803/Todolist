@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/item_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_toolbar"/>
+
+
+    <LinearLayout
+        android:id="@+id/item_Linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/item_toolbar"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/itemlist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="todolist 제목"
+            android:textColor="@color/black"
+            android:textSize="32dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_horizontalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:layout_below="@id/item_Linearlayout"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="115dp"
+            android:layout_height="35dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#000000"
+            app:strokeWidth="20dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:background="@color/white"
+                android:paddingTop="7dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="55dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/alarm"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미루기"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:paddingLeft="48dp"
+                android:paddingTop="7dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="115dp"
+            android:layout_height="35dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#000000"
+            app:strokeWidth="20dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:background="@color/white"
+                android:paddingTop="7dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/todo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="삭제"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:paddingLeft="55dp"
+                android:paddingTop="7dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="115dp"
+            android:layout_height="35dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#000000"
+            app:strokeWidth="20dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:background="@color/white"
+                android:paddingTop="7dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/check"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="완료"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:paddingLeft="53dp"
+                android:paddingTop="8dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/itemlist_textInput"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/item_bottomNavBar"
+        android:layout_below="@id/item_horizontalLayout">
+
+        <EditText
+            android:id="@+id/itemlist_editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="30dp"
+            android:paddingBottom="410dp"
+            android:text="이곳을 탭 해서 메모 추가/수정"
+            android:textColor="@color/black" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/item_bottomNavBar"
+        android:background="#F2F4F4"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/my_navigation_item"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="#BDDAF1"
+        app:itemTextColor="#B3B2B2"/>
+
+</RelativeLayout>

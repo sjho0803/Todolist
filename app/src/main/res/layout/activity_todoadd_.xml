@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editText_todo"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <requestFocus/>
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/delay_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#FFA827">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alarm"
+            android:padding="40dp"/>
+
+        <TextView
+            android:text="미루기"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/todo_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#7AC4FF">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alarm"
+            android:padding="90dp"/>
+
+        <TextView
+            android:text="할일"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
